@@ -1,0 +1,27 @@
+macOS Vagrant
+
+Overview
+
+Check if a program is installed bash
+Annoying nsf password asking
+
+Annoying nsf password asking
+
+https://askubuntu.com/questions/412525/vagrant-up-and-annoying-nfs-password-asking
+https://astrails.com/blog/2009/09/29/how-to-fix-a-hosed-etc-sudoers-file-on-mac-osx
+
+sudo visudo
+
+Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
+Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
+Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
+%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
+max ALL=NOPASSWD: ALL
+
+fixing getting locked out of sudo
+
+https://astrails.com/blog/2009/09/29/how-to-fix-a-hosed-etc-sudoers-file-on-mac-osx
+
+Check if a program is installed bash
+
+command -v brew

@@ -1,0 +1,23 @@
+- hosts: all
+  tasks:
+    - name: Print something
+      debug:
+        msg: hello world
+
+    # - name: Create a file
+    #   copy:
+    #     content: ''
+    #     dest: somefile
+    #     force: no
+
+    # - name: Check if Homebrew is already installed
+    #   stat:
+    #     path: /usr/local/bin/brew
+    #   register: b
+
+    # - name: Install Homebrew
+    #   script: install-homebrew.sh
+    #   when: not b.stat.exists
+
+    # - homebrew:
+    #     name: lastpass-cli
